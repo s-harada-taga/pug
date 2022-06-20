@@ -1,0 +1,27 @@
+extends ../_component/_layout
+
+block title 
+  title MENU 
+
+block main
+  -
+    var img = "../img/";
+  main
+    h1 MEMBER
+    ul 
+      -
+        var food = [
+          "お好み焼き",
+          "もんじゃ焼き",
+          "小倉トースト",
+        ];
+        var images = [
+          "oko.jpg",
+          "mon.jpg",
+          "ogu.jpg",
+        ];
+      - for(var i=0; i<food.length; i++)
+        li 
+          h2 #{food[i]}
+          div 
+            img(src=img+images[i], alt="東京タワー")
